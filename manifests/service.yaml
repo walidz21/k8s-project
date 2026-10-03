@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+spec:
+  selector:
+    app: web               # finds pods by label — NOT by Deployment name
+  ports:
+  - port: 80               # the port the Service exposes
+    targetPort: 80         # the port on the pod it forwards to
